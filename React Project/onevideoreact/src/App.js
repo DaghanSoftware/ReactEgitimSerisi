@@ -1,12 +1,16 @@
 import React,{ Component } from "react";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      users: []
-    };
-  }
+  state = {
+    users:[]
+  };
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     users: []
+  //   };
+  // }
   render (){
     return (
         <div>
