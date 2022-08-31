@@ -1,13 +1,14 @@
 import React,{Component} from "react";
 
 class User extends Component{
-    constructor(props){
-        super(props);
-        this.OnDeleteClick = this.OnDeleteClick.bind(this);
-    }
-    OnDeleteClick(e){
-        console.log("Clicked");
-        console.log(this);
+    // constructor(props){
+    //     super(props);
+    // this.OnDeleteClick = this.OnDeleteClick.bind(this);
+    // }
+    OnDeleteClick(id,e){
+        const {deleteUser} = this.props;
+        deleteUser(id);
+        console.log("ID",id);
     }
     render(){
         const {id,name,email}=this.props;
@@ -16,7 +17,7 @@ class User extends Component{
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>{email}</td>
-                <td><button onClick={this.OnDeleteClick} className="btn btn-danger">Delete</button></td>
+                <td><button onClick={this.OnDeleteClick.bind(this,id)} className="btn btn-danger">Delete</button></td>
             </tr>
         )
     }

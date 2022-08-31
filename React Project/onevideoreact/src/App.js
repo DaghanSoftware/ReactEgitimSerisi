@@ -7,8 +7,10 @@ class App extends Component {
   //   users:[]
   // };
 
+
   constructor(props) {
     super(props);
+    
     this.state = {
       users: [
         {
@@ -28,15 +30,31 @@ class App extends Component {
         }
       ]
     };
+    this.deleteUser = this.deleteUser.bind(this);
+    this.AddUser = this.AddUser.bind(this);
+  }
+  AddUser(newUser){
+    let updatedUsers = this.state.users;
+    updatedUsers.push(newUser);
+    this.setState({
+      users:updatedUsers
+    });
+  }
+  deleteUser(id){
+    let updatedUsers = this.state.users;
+    updatedUsers = updatedUsers.filter(users=>users.id !==id);
+    this.setState({
+      users:updatedUsers
+    });
   }
   render (){
     return (
         <div className="container">
           <h5>User App</h5>
           <hr></hr>
-          <AddUser/>
+          <AddUser AddUser={this.AddUser}/>
           <hr></hr>
-          <Users users = {this.state.users}/>
+          <Users deleteUser={this.deleteUser} users = {this.state.users}/>
         </div>
     );
   }

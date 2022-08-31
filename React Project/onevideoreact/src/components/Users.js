@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import User from "./User";
 class Users extends Component {
     render(){
-        const {users} = this.props;
+        const {users,deleteUser} = this.props;
         return (
             <table className="table table-dark table-sm">
                   <thead>
@@ -16,7 +16,7 @@ class Users extends Component {
                     <tbody className="table-group-divider">
                         {users.map(user=>{
                                 const {id,name,email}=user;
-                                return <User key ={id} id = {id} name = {name} email = {email}/>;
+                                return <User key ={id} id = {id} name = {name} email = {email} deleteUser = {deleteUser}/>;
                             })}
                     </tbody>
             </table>
