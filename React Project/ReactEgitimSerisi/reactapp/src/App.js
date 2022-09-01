@@ -5,7 +5,7 @@ function App() {
   return (
     
     <div className="container">
-      <Navbar title= "User App"/>
+      <Navbar title = "User App"/>
       <hr></hr>
       <User
       name ="Semih Dağhan"
