@@ -1,19 +1,11 @@
 import './App.css';
-
+import User from './components/User';
 function App() {
-  const test = 34;
-  const isAuth = true;
   return (
     
     <div className="App">
-      <h1>{1+1}</h1>
-      <h2>{"semih".toUpperCase()}</h2>
-      <h3>{test}</h3>
-      <div>
-        {
-          isAuth ? <p>Kullanıcı Kayıtlı</p> : null
-        }
-      </div>
+      <h4>App Component</h4>
+      <User/>
     </div>
   );
 }
