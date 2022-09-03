@@ -10,4 +10,7 @@ function Navbar(props){
 Navbar.propTypes = {
     title : PropTypes.string.isRequired
 }
+Navbar.defaultProps = {
+    title: "Default App"
+}
 export default Navbar;
