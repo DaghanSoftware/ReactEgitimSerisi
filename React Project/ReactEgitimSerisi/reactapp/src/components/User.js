@@ -4,13 +4,14 @@ class User extends Component {
   constructor(props){
     super(props);
     this.state = {
-      test : "Test"
+      isVisible: false
     }
   }
 
   render() {
     // Destructing
     const {name,department,salary} = this.props;
+    const {isVisible} = this.state;
     return (
       <div className='col-md-8 mb-4'>
         <div className='card'>
@@ -18,11 +19,14 @@ class User extends Component {
             <h4 className='d-inline'>{name} </h4>
             <i className="fa-solid fa-trash-can" style={{cursor:"pointer"}}></i>
           </div>
-          <div className='card-body'>
+          {
+            isVisible ? <div className='card-body'>
             <p className='card-text'>Maaş : {salary}</p>
             <p className='card-text'>Department : {department}</p>
-            <p>{this.state.test}</p>
-          </div>
+            
+          </div> : null
+          }
+          
         </div>
       </div>
     )
