@@ -3,12 +3,11 @@ import PropTypes from 'prop-types'
 class User extends Component {
   constructor(props){
     super(props);
-    this.onClickEvent=this.onClickEvent.bind(this);
     this.state = {
       isVisible: false
     }
   }
-  onClickEvent(e){
+  onClickEvent = (e) =>{
     console.log(this);
   }
   render() {
