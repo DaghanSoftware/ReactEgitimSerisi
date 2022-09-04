@@ -7,8 +7,8 @@ class User extends Component {
       isVisible: false
     }
   }
-  onClickEvent = (e) =>{
-    console.log(this);
+  onClickEvent = (number,e) =>{
+    console.log(number);
   }
   render() {
     // Destructing
@@ -18,7 +18,7 @@ class User extends Component {
       <div className='col-md-8 mb-4'>
         <div className='card'>
           <div className='card-header d-flex justify-content-between'>
-            <h4 className='d-inline' onClick={this.onClickEvent}>{name} </h4>
+            <h4 className='d-inline' onClick={this.onClickEvent.bind(this,34)}>{name} </h4>
             <i className="fa-solid fa-trash-can" style={{cursor:"pointer"}}></i>
           </div>
           {
