@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 class User extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      test : "Test"
+    }
+  }
+
   render() {
     // Destructing
     const {name,department,salary} = this.props;
@@ -14,6 +21,7 @@ class User extends Component {
           <div className='card-body'>
             <p className='card-text'>Maaş : {salary}</p>
             <p className='card-text'>Department : {department}</p>
+            <p>{this.state.test}</p>
           </div>
         </div>
       </div>
