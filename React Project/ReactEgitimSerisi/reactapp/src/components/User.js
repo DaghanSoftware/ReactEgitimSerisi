@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 class User extends Component {
   constructor(props){
     super(props);
+    this.onClickEvent=this.onClickEvent.bind(this);
     this.state = {
       isVisible: false
     }
@@ -18,7 +19,7 @@ class User extends Component {
       <div className='col-md-8 mb-4'>
         <div className='card'>
           <div className='card-header d-flex justify-content-between'>
-            <h4 className='d-inline' onClick={this.onClickEvent.bind(this)}>{name} </h4>
+            <h4 className='d-inline' onClick={this.onClickEvent}>{name} </h4>
             <i className="fa-solid fa-trash-can" style={{cursor:"pointer"}}></i>
           </div>
           {
