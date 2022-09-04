@@ -7,7 +7,9 @@ class User extends Component {
       isVisible: false
     }
   }
-
+  onClickEvent(e){
+    console.log(this);
+  }
   render() {
     // Destructing
     const {name,department,salary} = this.props;
@@ -16,7 +18,7 @@ class User extends Component {
       <div className='col-md-8 mb-4'>
         <div className='card'>
           <div className='card-header d-flex justify-content-between'>
-            <h4 className='d-inline'>{name} </h4>
+            <h4 className='d-inline' onClick={this.onClickEvent.bind(this)}>{name} </h4>
             <i className="fa-solid fa-trash-can" style={{cursor:"pointer"}}></i>
           </div>
           {
