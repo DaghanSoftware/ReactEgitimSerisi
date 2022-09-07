@@ -10,7 +10,7 @@ class App extends Component {
     <div className="container">
       <Navbar title = "User App"/>
       <hr></hr>
-      <Users users = {this.state.users}/>
+      <Users />
     </div>
   )
   }
