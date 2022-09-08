@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const UserContext = React.createContext();
 //Provider(Sağlayıcı) , Consumer(Tüketici)
-
+//Action Nedir , Dispatch Nedir , Reducer Nedir
 export class UserProvider extends Component {
     state = {
         users: [
@@ -16,7 +16,7 @@ export class UserProvider extends Component {
             id: 2,
             name: "Emirhan Dağhan",
             salary : "6000",
-            department : "Tamirci"
+            department : "Servis"
           },
           {
             id: 3,
